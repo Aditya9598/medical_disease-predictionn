@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicted Disease</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #00FFFF;
+            background-image: url('static/images/istockphoto-1096227322-612x612.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        h3 {
+        
+            color: #333;
+            background-color: rgba(100, 200, 50, 0.8);
+            padding: 10px; //20px
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);//10px,5px  15px
+
+        }
+        .container {   
+            background-color: #fff;
+            padding: 40px;//40px
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(100, 200, 500, 1);
+            max-width: 500px;//500
+            text-align: center;
+            
+        }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="/static/images/doctor_clinic_image.png" alt="It's accuracy is 90%">
+        <h3 id = 'a'>Predicted Disease: {{ predicted_disease }}</h3>
+    </div>
+</body>
+</html>

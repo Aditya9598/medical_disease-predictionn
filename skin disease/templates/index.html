@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Class Disease Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #00FFFF; /* Aqua background color */
+            background-image: url('static/images/premium_photo-1658506671316-0b293df7c72b.jpeg'); /* Path to your background image */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            padding-top: 20px;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            margin-top: 100px; /* Center the form vertically */
+        }
+        input[type="file"] {
+            padding: 10px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h1>Multi-Class Disease Prediction</h1>
+    <form action="/predict" method="POST" enctype="multipart/form-data">
+        <label for="file">Upload an image:</label><br><br>
+        <input type="file" name="file" id="file" accept="image/*" required><br><br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
