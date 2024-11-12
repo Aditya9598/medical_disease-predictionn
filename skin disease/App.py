@@ -8,8 +8,7 @@ from werkzeug.utils import secure_filename  # To safely handle file names
 # Initialize Flask app with static folder for images
 app = Flask(__name__, static_folder='static')
 
-# Load the saved Keras model
-model = load_model('save_model.keras')
+
 
 # Define the disease names (make sure the names match the training labels)
 disease_names = ['Chickenpox', 'Eczema', 'Ringworm', 'Disease4', 'Disease5', 'Disease6', 'Disease7', 'Chickenpox', 'Disease9']
@@ -47,8 +46,7 @@ def predict():
     predicted_class = np.argmax(prediction[0])
     predicted_disease = disease_names[predicted_class]
 
-    # Optional: Remove the image file after prediction to avoid clutter
-    os.remove(filepath)
+
 
     # Pass the predicted disease to the frontend
     return render_template('result.html', predicted_disease=predicted_disease)
